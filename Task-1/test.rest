@@ -1,0 +1,10 @@
+# Testing all the Endpoints
+
+### TEST GET / WEBSITE
+GET http://localhost:8800
+
+### TEST GET / dashboard 
+GET http://localhost:8800/dashboard
+
+### DATA ENDPOINT
+GET http://localhost:8800/api/data

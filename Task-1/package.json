@@ -1,0 +1,17 @@
+{
+  "name": "task-1",
+  "version": "1.0.0",
+  "description": "Backend Server",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "legacyWatch": "true"
+  },
+  "keywords": [],
+  "author": "Sagardeep Das",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
