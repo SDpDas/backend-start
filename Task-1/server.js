@@ -55,4 +55,9 @@ app.get('/api/data', (req, res) => {
 // These endpoints fall under CRUD action methods- 
 // Create: post, Read: get, Update: put and Delete: delete
 
+app.post('/api/data', (req, res) => {
+    // body to create an user
+    const newEntry = req.body
+})
+
 /** --------------- */
