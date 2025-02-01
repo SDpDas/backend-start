@@ -1,6 +1,6 @@
 // The address of this server connected to network is:
 // URL -> http://localhost:8800
-// IP -> 127.0.0.8800
+// IP -> 127.0.0.1:8800
 
 /* ----------------- */
 
