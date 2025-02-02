@@ -8,3 +8,14 @@ GET http://localhost:8800/dashboard
 
 ### DATA ENDPOINT
 GET http://localhost:8800/api/data
+
+### DATA ENDPOINT FOR USER REGISTRATION
+POST http://localhost:8800/api/data
+Content-Type: application/json
+
+{
+    "name" : "Arka"
+}
+
+### DELETE END POINT TO DELETE USER
+DELETE http://localhost:8800/api/data
