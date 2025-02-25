@@ -1,2 +1,20 @@
-### GET homepage
-GET http://localhost:6000
+### GET /
+GET http://localhost:8800
+
+### POST auth/register
+POST http://localhost:8800/auth/register
+Content-Type: application/json
+
+{
+    "username" : "sagardeepdas34@gmail.com", 
+    "password" : "123456789"
+}
+
+### POST auth/login
+POST http://localhost:8800/auth/login
+Content-Type: application/json
+
+{
+    "username" : "sagardeepdas34@gmail.com", 
+    "password" : "123456789"
+}
