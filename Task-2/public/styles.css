@@ -150,6 +150,14 @@ hr {
     max-width: unset !important;
 }
 
+.footer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 70vh;
+    width: auto;
+}
+
 @keyframes widen {
     from {
         width: 20%;

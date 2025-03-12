@@ -25,13 +25,17 @@ router.post('/register', (req, res) => {
         `)
         const result = insertUser.run(username, hashedPassword)
 
-        // adding a to-do for the user we just registered
-        const defaultTodo = 'Hello :) Add your first todo'
+        // Adding a default todo for the user we just registered
+        const defaultTodo = 'Hello :) Add your first todo'; // This line is correct
 
         const insertTodo = db.prepare(`
             INSERT INTO todos(user_id, task) VALUES(?, ?)
         `)
-        insertTodo.run(result.lastInsertRowid, defaultTodo);
+
+        const insertTodoResult = insertTodo.run(result.lastInsertRowid, defaultTodo);
+        if (!insertTodoResult) {
+            return res.status(500).send({ message: "Failed to create default todo" });
+        }
 
         // create a token (to avoid getting data other than user's own from getting modified)
         const token = jwt.sign({id: result.lastInsertRowid}, process.env.JWT_SECRET, { expiresIn: '24h' })    

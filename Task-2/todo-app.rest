@@ -1,3 +1,5 @@
+## Following below are the client emulations to send CRUD requests.
+
 ### GET /
 GET http://localhost:8800
 
@@ -6,8 +8,8 @@ POST http://localhost:8800/auth/register
 Content-Type: application/json
 
 {
-    "username" : "sagardeepdas34@gmail.com", 
-    "password" : "123456789"
+    "username" : "xxx@gmail.com", 
+    "password" : "123"
 }
 
 ### POST auth/login
@@ -15,6 +17,33 @@ POST http://localhost:8800/auth/login
 Content-Type: application/json
 
 {
-    "username" : "sagardeepdas34@gmail.com", 
-    "password" : "123456789"
+    "username" : "xxx@gmail.com", 
+    "password" : "123"
 }
+
+### Fetch all todos GET / TODOS (protected)
+GET http://localhost:8800/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzQxNzgyMzY5LCJleHAiOjE3NDE4Njg3Njl9.WelSnojNJ2fStE_HHRKtZdCu2XRT4QVUxEy94WPhjwo
+
+### Create new todos POST / TODOS (protected)
+POST http://localhost:8800/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzQxNzgyMzY5LCJleHAiOjE3NDE4Njg3Njl9.WelSnojNJ2fStE_HHRKtZdCu2XRT4QVUxEy94WPhjwo
+Content-Type: application/json
+
+{
+    "task": "Task no. 1"
+}
+
+### Update a todo PUT /TODOS /:ID (protected)
+PUT http://localhost:8800/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzQxNzgyMzY5LCJleHAiOjE3NDE4Njg3Njl9.WelSnojNJ2fStE_HHRKtZdCu2XRT4QVUxEy94WPhjwo
+Content-Type: application/json
+
+{
+    "completed": 1
+}
+
+### Delete a todo DELETE / TODOS /:ID (protected)
+DELETE http://localhost:8800/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzQxNzgwNDkzLCJleHAiOjE3NDE4NjY4OTN9.Be5kG-gixU9I0FymmKR3ufFAwcsgCsKzIIpOy4cYJZ4
+Content-Type: application/json
